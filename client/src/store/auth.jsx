@@ -8,6 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [services, setServices] = useState([]); // Initialize as an empty array
 
   const storeTokenInLS = (serverToken) => {
+    setToken(serverToken);
     localStorage.setItem("token", serverToken);
   };
 
