@@ -9,6 +9,10 @@ import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Error from "./pages/Error"
 import Footer from "./components/footer/Footer"
+import AdminLayout from "./components/layouts/AdminLayout";
+import AdminUsers from "./pages/AdminUsers";
+import AdminContacts from "./pages/AdminContacts";
+import AdminUpdate from "./pages/AdminUpdate";
 
 const App=()=>{
   return (
@@ -24,6 +28,11 @@ const App=()=>{
           <Route path="/login" element={<Login/>} />  
           <Route path="/logout" element={<Logout/>} />
           <Route path="*" element={<Error/>} />
+          <Route path="/admin" element={<AdminLayout/>}>
+            <Route path="users" element={<AdminUsers/>}/>
+            <Route path="contacts" element={<AdminContacts/>}/>
+            <Route path="users/:id/edit" element={<AdminUpdate />} />
+          </Route>
       </Routes>
     <Footer/>  
     </BrowserRouter>

@@ -415,3 +415,226 @@ a:hover,a.active{
   }
 }
 
+/* admin */
+.admin-users,
+.admin-user {
+  /* border: 0.2rem solid var(--btn-color); */
+}
+
+.admin-users {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Reduce the gap to make it more compact */
+  
+}
+
+th {
+  font-size: 1.4rem; /* Smaller font size */
+  letter-spacing: 0.05rem; /* Tighter letter spacing */
+  padding: 2rem; /* Less padding */
+  color: var(--dark-color);
+  box-shadow: 0 0.2rem 0 #646cff; /* Smaller shadow */
+  margin-bottom: 5px; /* Less margin */
+  text-transform: capitalize;
+  
+}
+
+td {
+  font-size: 1.3rem; /* Smaller font size */
+  letter-spacing: 0.05rem; /* Tighter letter spacing */
+  padding: 1.5rem; /* Less padding */
+  text-align: center;
+  color: var(--dark-color);
+  width: 20rem; /* Smaller width */
+  /* border: 0.1rem solid red; */
+}
+
+table {
+  background: #fff;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 5px 20px 0px; /* Softer shadow */
+  border-collapse: collapse;
+  border-radius: 1rem;
+  overflow: hidden; /* Ensure content fits within rounded borders */
+  background-color: #e5e7f2;
+}
+
+.admin-contacts-section {
+  padding: 2rem; /* Less padding */
+}
+
+.admin-contacts-section tr {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(8rem, 1fr)); /* Smaller min-width */
+  align-items: center;
+  box-shadow: 0 0.2rem 0 grey; /* Smaller shadow */
+  margin-bottom: 5px; /* Less margin */
+  border-bottom: 3px solid transparent;
+  color: var(--bg-color);
+
+  &:last-child {
+    box-shadow: none;
+  }
+}
+
+body tr {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(8rem, 1fr)); /* Smaller min-width */
+  align-items: center;
+  box-shadow: 0 0.2rem 0 grey; /* Smaller shadow */
+  margin-bottom: 5px; /* Less margin */
+  border-bottom: 3px solid transparent;
+  color: var(#7f8cad);
+
+  &:last-child {
+    box-shadow: none;
+  }
+}
+
+.updateLink {
+  background: #cff6dd;
+  color: #1fa750;
+  border-radius: 2rem; /* Smaller radius */
+  padding: 0.5rem 2rem; /* Smaller padding */
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+
+  &:hover {
+    color: #cff6dd;
+    background: #1fa750;
+    font-weight: bold;
+  }
+}
+
+
+
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #524ad1;
+  --text-color: #6c63ff;
+  --background-color: #fff;
+  --border-color: #ccc;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Grid Layout */
+.grid-two-cols {
+  display: flex;
+  
+}
+
+/* Form Styles */
+form {
+  width: 100%;
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  color: var(--text-color);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="phone"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #0b2f6d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Heading */
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  label, input[type="text"], input[type="email"], input[type="phone"] {
+    font-size: 0.9rem;
+  }
+}
+
+.admin-contacts-section {
+  padding: 2rem;
+  background-color: #f9f9f9; /* Light background for the section */
+}
+
+.admin-contacts-section h1 {
+  font-size: 2.4rem;
+  color: var(--btn-color);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.admin-users {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Space between cards */
+}
+
+.admin-users div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 2.4rem;
+  border: 0.2rem solid var(--helper-color);
+  border-radius: 0.8rem; /* Rounded corners */
+  background-color: #fff; /* White background for cards */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.admin-users p {
+  font-size: 1.6rem;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+.admin-users .btn {
+  background-color: var(--btn-color);
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-users .btn:hover {
+  background-color: #524ad1; /* Slightly darker on hover */
+}
